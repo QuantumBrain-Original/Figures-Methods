@@ -23,8 +23,6 @@ class Figure
 			else
 				is_correct = "Неправильная";
 
-			sides_count = 0;
-
 			std::cout << name << ":\n" << is_correct << "\nКоличество сторон: " << sides_count << std::endl;
 
 			std::cout << "\n";
@@ -96,7 +94,7 @@ class RectangularTriangle : public Triangle // Прямоугольный тре
 			return false;
 		}
 
-		RectangularTriangle(int sideA, int sideB, int sideC, int angleA, int angleB, int angleC) :
+		RectangularTriangle(int sideA = 0, int sideB = 0, int sideC = 0, int angleA = 0, int angleB = 0, int angleC = 0) :
 			Triangle(sideA, sideB, sideC, angleA, angleB, angleC)
 		{
 			name = "Прямоугольный треугольник";
@@ -114,7 +112,7 @@ class IsoscelesTriangle : public Triangle // Равнобедренный тре
 			return false;
 		}
 
-		IsoscelesTriangle(int sideA, int sideB, int sideC, int angleA, int angleB, int angleC) :
+		IsoscelesTriangle(int sideA = 0, int sideB = 0, int sideC = 0, int angleA = 0, int angleB = 0, int angleC = 0) :
 			Triangle(sideA, sideB, sideC, angleA, angleB, angleC)
 		{
 			name = "Равнобедренный треугольник";
@@ -132,7 +130,7 @@ class EquilateralTriangle : public Triangle // Равносторонний тр
 			return false;
 		}
 
-		EquilateralTriangle(int sideA, int sideB, int sideC, int angleA, int angleB, int angleC) :
+		EquilateralTriangle(int sideA = 0, int sideB = 0, int sideC = 0, int angleA = 0, int angleB = 0, int angleC = 0) :
 			Triangle(sideA, sideB, sideC, angleA, angleB, angleC)
 		{
 			name = "Равносторонний треугольник";
@@ -206,7 +204,7 @@ class Parallelogram : public Quadrangle // Параллелограмм (сто�
 			return false;
 		}
 
-		Parallelogram(int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD) :
+		Parallelogram(int sideA = 0, int sideB = 0, int sideC = 0, int sideD = 0, int angleA = 0, int angleB = 0, int angleC = 0, int angleD = 0) :
 			Quadrangle(sideA, sideB, sideC, sideD, angleA, angleB, angleC, angleD)
 		{
 			name = "Параллелограмм";
@@ -224,7 +222,7 @@ class Rhombus : public Parallelogram // Ромб (все стороны равн
 			return false;
 		}
 
-		Rhombus(int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD) :
+		Rhombus(int sideA = 0, int sideB = 0, int sideC = 0, int sideD = 0, int angleA = 0, int angleB = 0, int angleC = 0, int angleD = 0) :
 			Parallelogram(sideA, sideB, sideC, sideD, angleA, angleB, angleC, angleD)
 		{
 			name = "Ромб";
@@ -242,7 +240,7 @@ class Rectangles : public Parallelogram // Прямоугольник (стор�
 			return false;
 		}
 
-		Rectangles(int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD) :
+		Rectangles(int sideA = 0, int sideB = 0, int sideC = 0, int sideD = 0, int angleA = 0, int angleB = 0, int angleC = 0, int angleD = 0) :
 			Parallelogram(sideA, sideB, sideC, sideD, angleA, angleB, angleC, angleD)
 		{
 			name = "Прямоугольник";
@@ -260,7 +258,7 @@ class Square : public Rectangles // Квадрат (все стороны рав
 			return false;
 		}
 
-		Square(int sideA, int sideB, int sideC, int sideD, int angleA, int angleB, int angleC, int angleD) :
+		Square(int sideA = 0, int sideB = 0, int sideC = 0, int sideD = 0, int angleA = 0, int angleB = 0, int angleC = 0, int angleD = 0) :
 			Rectangles(sideA, sideB, sideC, sideD, angleA, angleB, angleC, angleD)
 		{
 			name = "Квадрат";
